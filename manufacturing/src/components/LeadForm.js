@@ -1,3 +1,8 @@
+function pushGtmLead(service) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: "lead_submit", service });
+}
+
 import { h, clear } from '../lib/dom.js';
 import { track, ANALYTICS_EVENTS } from '../lib/analytics.js';
 import { postEnquiry } from '../lib/api.js';
@@ -109,6 +114,7 @@ export function LeadForm({ fields, submitLabel, note }) {
 
     if (res.ok) {
       showStatus(statusEl, 'Thank you — your enquiry has been received. We will get back to you shortly.', 'success');
+      pushGtmLead("manufacturing");
       track(ANALYTICS_EVENTS.formSuccess);
       form.reset();
     } else if (res.unavailable) {

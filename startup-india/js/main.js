@@ -11,6 +11,11 @@
     ANALYTICS: { ENABLED: false, track: function () {} }
   };
 
+  function pushGtmLead(service) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "lead_submit", service });
+  }
+
   function track(name, data) {
     if (CFG && CFG.ANALYTICS && CFG.ANALYTICS.ENABLED && typeof CFG.ANALYTICS.track === 'function') {
       CFG.ANALYTICS.track(name, data || {});
@@ -195,6 +200,7 @@
         })
         .then(function (body) {
           setStatus('success', 'Thank you! Your enquiry has been received and we will get back to you shortly.', false);
+          pushGtmLead('startup_india');
           track('form_success', { formId: formId, id: body && body.id });
           var form = document.getElementById(formId);
           if (form) form.reset();

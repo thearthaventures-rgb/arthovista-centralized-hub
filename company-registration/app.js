@@ -33,6 +33,11 @@
     }
   }
 
+  function pushGtmLead(service) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "lead_submit", service });
+  }
+
   function track(name, params = {}) {
     window.dispatchEvent(new CustomEvent("arthovista:event", { detail: { name, params } }));
     if (DEBUG) console.debug(`[artho] ${name}`, params);
@@ -264,6 +269,7 @@
         return;
       }
 
+      pushGtmLead("company_registration");
       track("leadform_success", { id: payload && payload.id });
       form.hidden = true;
       if (successBox) {
