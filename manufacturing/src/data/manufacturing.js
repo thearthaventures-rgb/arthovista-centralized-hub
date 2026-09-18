@@ -24,7 +24,7 @@ export const site = {
     { city: 'Amravati', area: '', tag: 'Maharashtra Industrial Zone' }
   ],
   branding: {
-    logo: '/logo.svg',
+    logo: './logo.svg',
     nameHtml: 'Artho<em>Vista</em>',
     serviceLabel: 'Manufacturing Companies'
   }

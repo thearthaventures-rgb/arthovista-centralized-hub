@@ -2,7 +2,12 @@
    VITE_GA_MEASUREMENT_ID unset  -> all calls are safe no-ops.
    Set -> pushes dataLayer / gtag events. */
 
-const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || '';
+// This site is intentionally served as a plain static site (no Vite build).
+// Read an optional GA ID from a normal browser global instead of import.meta.env.
+// This keeps native browser ES modules working on localhost and Vercel.
+const GA_ID = (typeof window !== 'undefined' && window.__ARTHOVISTA_GA_ID)
+  ? String(window.__ARTHOVISTA_GA_ID).trim()
+  : '';
 
 function ga(...args) {
   if (!GA_ID) return;

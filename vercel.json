@@ -1,5 +1,13 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/company-registration", "destination": "/company-registration/index.html" },
+    { "source": "/company-registration/", "destination": "/company-registration/index.html" },
+    { "source": "/manufacturing", "destination": "/manufacturing/index.html" },
+    { "source": "/manufacturing/", "destination": "/manufacturing/index.html" },
+    { "source": "/startup-india", "destination": "/startup-india/index.html" },
+    { "source": "/startup-india/", "destination": "/startup-india/index.html" }
+  ]
 }
