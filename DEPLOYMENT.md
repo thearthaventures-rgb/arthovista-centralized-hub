@@ -48,3 +48,14 @@ The manufacturing endpoint also supports its existing optional rate-limit variab
 ## Local development
 
 `npm run dev` serves the static pages. The Vercel `/api` functions require Vercel's serverless runtime, so test the live deployment or use `vercel dev` for local API testing.
+
+## Google Tag Manager
+
+Google Tag Manager container `GTM-WR9CZMLF` is installed in the `<head>` and immediately after the opening `<body>` tag on all four HTML entry pages:
+- `/`
+- `/company-registration/`
+- `/manufacturing/`
+- `/startup-india/`
+
+After deployment, use Google Tag Manager Preview mode to verify the container loads on each route before publishing tags.
+
