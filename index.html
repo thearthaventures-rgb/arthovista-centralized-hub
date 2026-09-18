@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0A2A57" />
+
+<title>ArthoVista — Business Advisory &amp; Capital-Access Services</title>
+<meta name="description" content="ArthoVista is a business advisory and capital-access platform for Indian enterprises. Company registration, manufacturing business advisory, and Startup India / DPIIT recognition guidance — explore our current services." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://arthovistaservices.sbs/" />
+<meta name="author" content="ArthoVista" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ArthoVista — Business Advisory & Capital-Access Services" />
+<meta property="og:description" content="Company registration, manufacturing business advisory, and Startup India recognition guidance — one platform, three specialized services." />
+<meta property="og:url" content="https://arthovistaservices.sbs/" />
+<meta property="og:site_name" content="ArthoVista" />
+<meta property="og:image" content="https://arthovistaservices.sbs/assets/arthovista-logo.png" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="ArthoVista — Business Advisory & Capital-Access Services" />
+<meta name="twitter:description" content="Company registration, manufacturing business advisory, and Startup India recognition guidance." />
+
+<link rel="icon" type="image/svg+xml" href="/company-registration/assets/logo.svg" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ArthoVista",
+  "url": "https://arthovistaservices.sbs/",
+  "logo": "https://arthovistaservices.sbs/assets/arthovista-logo.png",
+  "telephone": "+91 98999 02568",
+  "email": "support@arthovista.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Noida", "addressRegion": "Uttar Pradesh", "addressCountry": "IN" },
+  "sameAs": [],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "ArthoVista Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Company Registration", "url": "https://arthovistaservices.sbs/company-registration/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manufacturing Business Advisory", "url": "https://arthovistaservices.sbs/manufacturing/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Startup India / DPIIT Recognition Guidance", "url": "https://arthovistaservices.sbs/startup-india/" } }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --navy:#0A2A57; --navy-deep:#071F42; --navy-ink:#10233F;
+    --orange:#F75D01; --orange-deep:#C54800;
+    --blue:#024CB5; --blue-deep:#0C3B94;
+    --green:#199124; --green-deep:#0D8C2E;
+    --ink:#14233C; --body:#40495E; --muted:#5B6580;
+    --surface:#FFFFFF; --surface-alt:#F6F5F1; --line:#E4E1D9;
+    --serif:'Fraunces', Georgia, serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; font-family:var(--sans); color:var(--ink); background:var(--surface); line-height:1.55; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .container{max-width:1180px; margin:0 auto; padding:0 24px;}
+  h1,h2,h3{font-family:var(--serif); font-weight:600; line-height:1.12; margin:0;}
+  .skip-link{position:absolute; left:-999px; top:0; background:var(--navy); color:#fff; padding:10px 16px; z-index:200;}
+  .skip-link:focus{left:12px; top:12px;}
+  :focus-visible{outline:3px solid var(--blue); outline-offset:2px;}
+
+  /* ---------- Header ---------- */
+  .site-header{position:sticky; top:0; z-index:100; background:rgba(255,255,255,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .header-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 24px;}
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+  .brand img{width:44px; height:44px; border-radius:8px;}
+  .brand-word{font-family:var(--serif); font-weight:600; font-size:1.15rem; color:var(--navy);}
+  .brand-word em{font-style:normal; color:var(--orange);}
+  nav.primary{display:flex; align-items:center; gap:28px;}
+  nav.primary a{font-size:.94rem; font-weight:500; text-decoration:none; color:var(--navy-ink);}
+  nav.primary a.call{display:flex; align-items:center; gap:8px; color:var(--orange-deep); font-weight:600;}
+
+  /* ---------- Hero ---------- */
+  .hero{background:linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 62%, #061936 100%); color:#fff; padding:88px 0 0; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; padding-bottom:64px;}
+  .hero-eyebrow{font-size:.82rem; letter-spacing:.06em; color:#FFB37A; font-weight:600; margin-bottom:18px;}
+  .hero h1{font-size:clamp(2.3rem, 4.2vw, 3.4rem); color:#fff; margin-bottom:22px;}
+  .hero h1 .accent{color:var(--orange); font-style:italic;}
+  .hero p.lede{font-size:1.12rem; color:#C9D3E4; max-width:52ch; margin:0 0 30px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:14px 26px; border-radius:6px; font-weight:600; font-size:.98rem; text-decoration:none; border:1px solid transparent; cursor:pointer;}
+  .btn-primary{background:var(--orange); color:#fff;}
+  .btn-primary:hover{background:var(--orange-deep);}
+  .btn-outline{border-color:rgba(255,255,255,.35); color:#fff;}
+  .btn-outline:hover{border-color:#fff;}
+  .hero-visual{display:flex; justify-content:center; align-items:center;}
+  .hero-visual img{width:100%; max-width:300px; filter:drop-shadow(0 20px 40px rgba(0,0,0,.35));}
+
+  .stat-bar{background:var(--navy-deep); border-top:1px solid rgba(255,255,255,.08);}
+  .stat-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:0;}
+  .stat{padding:26px 24px; border-left:1px solid rgba(255,255,255,.1);}
+  .stat:first-child{border-left:none;}
+  .stat .num{font-family:var(--serif); font-size:1.9rem; color:var(--orange); font-weight:600;}
+  .stat .label{font-size:.82rem; color:#AAB6CC; margin-top:2px;}
+
+  /* ---------- Intro ---------- */
+  .intro{padding:80px 0 70px;}
+  .intro-grid{display:grid; grid-template-columns:.9fr 1.5fr; gap:60px; align-items:start;}
+  .intro-kicker{font-size:.8rem; letter-spacing:.05em; color:var(--orange-deep); font-weight:700; text-transform:uppercase;}
+  .intro h2{font-size:1.9rem; color:var(--navy); margin-top:10px;}
+  .intro p{font-size:1.06rem; color:var(--body); max-width:62ch;}
+  .intro p + p{margin-top:16px;}
+
+  /* ---------- Services ---------- */
+  .services{background:var(--surface-alt); padding:84px 0 96px;}
+  .services-head{max-width:640px; margin:0 0 52px;}
+  .services-head .intro-kicker{color:var(--blue-deep);}
+  .services-head h2{font-size:2.1rem; color:var(--navy); margin-top:10px;}
+  .services-head p{color:var(--body); font-size:1.05rem; margin-top:14px;}
+
+  .service-row{display:grid; grid-template-columns:120px 1fr; gap:36px; padding:44px 0; border-top:1px solid var(--line);}
+  .services .service-row:last-child{border-bottom:1px solid var(--line);}
+  .service-index{font-family:var(--serif); font-size:2.6rem; font-weight:600; color:var(--line); line-height:1;}
+  .service-body{display:grid; grid-template-columns:1.5fr 1fr; gap:40px; align-items:start;}
+  .service-tag{display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:4px 10px; border-radius:4px; margin-bottom:14px;}
+  .service-row.orange .service-tag{background:#FFF1E6; color:var(--orange-deep);}
+  .service-row.blue .service-tag{background:#E8F0FD; color:var(--blue-deep);}
+  .service-row.green .service-tag{background:#E9F7EB; color:var(--green-deep);}
+  .service-row h3{font-size:1.55rem; color:var(--navy); margin-bottom:12px;}
+  .service-row p.desc{color:var(--body); font-size:1rem; max-width:56ch;}
+  .service-meta{border-left:2px solid var(--line); padding-left:28px;}
+  .service-row.orange .service-meta{border-color:var(--orange);}
+  .service-row.blue .service-meta{border-color:var(--blue);}
+  .service-row.green .service-meta{border-color:var(--green);}
+  .service-meta .for{font-size:.82rem; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.03em; margin-bottom:6px;}
+  .service-meta .who{font-size:.96rem; color:var(--ink); margin-bottom:18px;}
+  .service-cta{display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:.95rem; text-decoration:none; padding:11px 20px; border-radius:6px; color:#fff;}
+  .service-row.orange .service-cta{background:var(--orange);}
+  .service-row.blue .service-cta{background:var(--blue);}
+  .service-row.green .service-cta{background:var(--green-deep);}
+
+  /* ---------- Approach ---------- */
+  .approach{padding:80px 0;}
+  .approach-head{max-width:600px; margin-bottom:44px;}
+  .approach-head .intro-kicker{color:var(--green-deep);}
+  .approach-head h2{font-size:1.9rem; color:var(--navy); margin-top:10px;}
+  .approach-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:32px;}
+  .approach-item h3{font-family:var(--sans); font-weight:700; font-size:1.05rem; color:var(--navy); margin-bottom:8px;}
+  .approach-item p{font-size:.95rem; color:var(--body); margin:0;}
+
+  /* ---------- Footer CTA ---------- */
+  .footer-cta{background:linear-gradient(120deg, var(--orange) 0%, var(--orange-deep) 100%); color:#fff; padding:56px 0;}
+  .footer-cta-inner{display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap;}
+  .footer-cta h2{font-size:1.6rem; color:#fff; max-width:520px;}
+  .footer-cta .btn{background:#fff; color:var(--orange-deep);}
+  .footer-cta .btn:hover{background:#FFF3E8;}
+
+  footer.site-footer{background:var(--navy-deep); color:#C9D3E4; padding:56px 0 28px;}
+  .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px;}
+  .footer-brand{display:flex; align-items:center; gap:12px; margin-bottom:14px;}
+  .footer-brand img{width:36px; height:36px; border-radius:6px;}
+  .footer-brand strong{font-family:var(--serif); color:#fff; font-size:1.05rem;}
+  .footer-tag{font-size:.92rem; max-width:40ch; color:#9FADC7;}
+  .footer-col h4{font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; color:#7E8FB2; margin:0 0 14px; font-weight:700;}
+  .footer-col ul{list-style:none; margin:0; padding:0;}
+  .footer-col li{margin-bottom:10px; font-size:.92rem;}
+  .footer-col a{text-decoration:none; color:#C9D3E4;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.08); margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.82rem; color:#6E7FA0;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr; padding-top:20px;}
+    .hero-visual{order:-1; max-width:220px; margin:0 auto;}
+    .hero-visual img{max-width:180px;}
+    .stat-grid{grid-template-columns:repeat(2,1fr);}
+    .stat:nth-child(3){border-left:none;}
+    .intro-grid{grid-template-columns:1fr; gap:24px;}
+    .service-row{grid-template-columns:1fr; gap:16px;}
+    .service-index{font-size:1.6rem;}
+    .service-body{grid-template-columns:1fr; gap:20px;}
+    .service-meta{border-left:none; border-top:2px solid var(--line); padding-left:0; padding-top:18px;}
+    .approach-grid{grid-template-columns:1fr; gap:28px;}
+    .footer-grid{grid-template-columns:1fr; gap:28px;}
+    nav.primary{display:none;}
+  }
+  @media (max-width:600px){
+    .footer-cta-inner{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#services">Skip to services</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="ArthoVista home">
+      <img src="/assets/arthovista-logo.png" alt="ArthoVista" />
+      <span class="brand-word">Artho<em>Vista</em></span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#approach">Our Approach</a>
+      <a href="tel:+919899902568" class="call">+91 98999 02568</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="hero-eyebrow">Business advisory &amp; capital-access</p>
+      <h1>Bring the right people to your business, <span class="accent">at the right stage.</span></h1>
+      <p class="lede">ArthoVista helps Indian enterprises move from a first registration to a fundable, compliant, growing business — advisory and execution across setup, government funding, compliance and documentation.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#services">Explore our services</a>
+        <a class="btn btn-outline" href="tel:+919899902568">Call +91 98999 02568</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="/assets/arthovista-logo.png" alt="ArthoVista logo — Sapno Se Samriddhi Tak" />
+    </div>
+  </div>
+  <div class="stat-bar">
+    <div class="container stat-grid">
+      <div class="stat"><div class="num">₹262Cr+</div><div class="label">Capital impact</div></div>
+      <div class="stat"><div class="num">500+</div><div class="label">Enterprises served</div></div>
+      <div class="stat"><div class="num">95%</div><div class="label">Overall success ratio</div></div>
+      <div class="stat"><div class="num">5+ Years</div><div class="label">Proven execution</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container intro-grid">
+    <div>
+      <p class="intro-kicker">Who we are</p>
+      <h2>One partner, several gaps closed</h2>
+    </div>
+    <div>
+      <p>Building a business is rarely about solving one problem. A company may have a strong product but lack the right registration. A growing enterprise may need funding and subsidies it hasn't identified. A startup may need the right documentation before it can be recognised.</p>
+      <p>ArthoVista works across business foundations, government funding, compliance and growth advisory — bringing the expertise and follow-through required to move from an idea to a scalable, fundable enterprise.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-head">
+      <p class="intro-kicker">Available now</p>
+      <h2>Three services, live today</h2>
+      <p>Each one is a focused, specialized experience — pick the one that matches what you're working on right now.</p>
+    </div>
+
+    <div class="service-row orange">
+      <div class="service-index">01</div>
+      <div class="service-body">
+        <div>
+          <span class="service-tag">Registration &amp; Business Setup</span>
+          <h3>Company Registration</h3>
+          <p class="desc">Every company starts with a decision about its structure — and the paperwork that follows. Choose the right entity — Private Limited, LLP, OPC, Section 8 or Partnership — and complete registration with a professional guiding each step, from filing to follow-up.</p>
+        </div>
+        <div class="service-meta">
+          <div class="for">Best for</div>
+          <div class="who">Founders forming a new legal entity and unsure which structure fits their funding plans.</div>
+          <a class="service-cta" href="/company-registration/">Start your registration →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-row blue">
+      <div class="service-index">02</div>
+      <div class="service-body">
+        <div>
+          <span class="service-tag">Manufacturing Advisory</span>
+          <h3>Manufacturing Business Advisory</h3>
+          <p class="desc">Execution-led support for the business side of manufacturing: company setup and registrations, government funding and subsidies (CLCSS, PLI, MSME schemes), compliance, certifications and documentation — done for you, not just advised on.</p>
+        </div>
+        <div class="service-meta">
+          <div class="for">Best for</div>
+          <div class="who">Manufacturing units — new or expanding — that need setup, funding and compliance handled as one connected engagement.</div>
+          <a class="service-cta" href="/m/">Book a free diagnostic →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-row green">
+      <div class="service-index">03</div>
+      <div class="service-body">
+        <div>
+          <span class="service-tag">Identification &amp; Startup</span>
+          <h3>Startup India / DPIIT Recognition</h3>
+          <p class="desc">Navigate Startup India recognition with clarity — eligibility assessment, documentation, application preparation and filing support. The government assesses; ArthoVista assists, with structured, professional execution support.</p>
+        </div>
+        <div class="service-meta">
+          <div class="for">Best for</div>
+          <div class="who">Eligible startups seeking DPIIT recognition and the subsidies, tenders and tax benefits it unlocks.</div>
+          <a class="service-cta" href="/startup-india/">Check my eligibility →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="approach-head">
+      <p class="intro-kicker">How we work</p>
+      <h2>Understand, structure, execute</h2>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-item">
+        <h3>We understand first</h3>
+        <p>Before recommending anything, we look at your business, its needs and the opportunities actually available to it — not a generic checklist.</p>
+      </div>
+      <div class="approach-item">
+        <h3>We structure the path</h3>
+        <p>The right entity, the right scheme, the right documentation — sequenced so each step supports the next one.</p>
+      </div>
+      <div class="approach-item">
+        <h3>We follow through</h3>
+        <p>Filing, liaisoning, follow-up on queries — we stay with the process until it's actually done, not just advised on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="footer-cta">
+  <div class="container footer-cta-inner">
+    <h2>Not sure which service fits? A 30-minute conversation will tell you.</h2>
+    <a class="btn" href="tel:+919899902568">Call +91 98999 02568</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="/assets/arthovista-logo.png" alt="" aria-hidden="true" />
+        <strong>ArthoVista</strong>
+      </div>
+      <p class="footer-tag">Business advisory and capital-access support for Indian enterprises — from the right entity structure on day one to the funding and compliance that follows.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/company-registration/">Company Registration</a></li>
+        <li><a href="/manufacturing/">Manufacturing Advisory</a></li>
+        <li><a href="/startup-india/">Startup India Recognition</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Talk to us</h4>
+      <ul>
+        <li><a href="tel:+919899902568">+91 98999 02568</a></li>
+        <li><a href="mailto:support@arthovista.com">support@arthovista.com</a></li>
+        <li>Noida, Sector 62</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="copyright-year"></span> ArthoVista. All rights reserved.</span>
+    <span>arthovistaservices.sbs</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

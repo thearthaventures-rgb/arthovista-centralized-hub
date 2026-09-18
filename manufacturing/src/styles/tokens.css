@@ -1,0 +1,112 @@
+/* ============================================================
+   ARTHOVISTA DESIGN SYSTEM — TOKENS
+   Source of truth: ArthoVista brand logo (white bg, orange/green/blue)
+   Shared by all future service pages (Company Registration, Startup
+   India, Manufacturing, Funding, Compliance, Business Advisory…).
+   ============================================================ */
+
+:root {
+  /* Brand palette — derived from the official logo SVG fills */
+  --av--orange-050: #FFF1E6;
+  --av--orange-100: #FFE0C7;
+  --av--orange-300: #FD8002;
+  --av--orange-400: #FB6B03;
+  --av--orange-500: #F75D01;   /* primary brand orange */
+  --av--orange-600: #EC6823;
+  --av--orange-700: #F93E08;
+
+  --av--blue-050: #E8F0FD;
+  --av--blue-100: #D8E7FB;
+  --av--blue-500: #035DC9;
+  --av--blue-600: #024CB5;     /* primary brand blue */
+  --av--blue-700: #0251BA;
+  --av--blue-800: #0245BA;
+
+  --av--green-050: #E9F7EB;
+  --av--green-500: #34A126;
+  --av--green-600: #199124;    /* primary brand green */
+  --av--green-700: #0D8C2E;
+  --av--green-800: #0D812D;
+
+  /* Semantic scales */
+  --av--ink: #14202E;
+  --av--ink-soft: #3E4C5C;
+  --av--muted: #6B7A8C;
+  --av--line: #E7E0DA;
+  --av--surface: #FFFFFF;
+  --av--surface-alt: #FDF8F4;
+  --av--surface-sunken: #F5F6F8;
+
+  /* CTA */
+  --av--cta-bg: linear-gradient(135deg, var(--av--orange-500) 0%, var(--av--orange-400) 100%);
+  --av--cta-hover-bg: linear-gradient(135deg, var(--av--orange-600) 0%, var(--av--orange-500) 100%);
+  --av--cta-focus: #FB6B03;
+  --av--secondary-cta-bg: linear-gradient(135deg, var(--av--blue-600) 0%, var(--av--blue-700) 100%);
+
+  /* Semantic states */
+  --av--state-success: #199124;
+  --av--state-success-bg: #E9F7EB;
+  --av--state-warning: #B45F08;
+  --av--state-warning-bg: #FFF4EC;
+  --av--state-error: #C0392B;
+  --av--state-error-bg: #FDEEEC;
+  --av--state-info: #024CB5;
+  --av--state-info-bg: #E8F0FD;
+
+  /* Typography */
+  --av--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --av--fs-xs: 12px;
+  --av--fs-sm: 13px;
+  --av--fs-base: 15px;
+  --av--fs-md: 16px;
+  --av--fs-lg: 18px;
+  --av--fs-xl: 20px;
+  --av--fs-2xl: 24px;
+  --av--fs-3xl: 30px;
+  --av--fs-display: clamp(34px, 5vw, 56px);
+  --av--fs-h2: clamp(28px, 3.6vw, 40px);
+  --av--fs-h3: 19px;
+  --av--lh-tight: 1.15;
+  --av--lh-body: 1.6;
+
+  /* Spacing scale */
+  --av--s-1: 4px;
+  --av--s-2: 8px;
+  --av--s-3: 12px;
+  --av--s-4: 16px;
+  --av--s-5: 20px;
+  --av--s-6: 24px;
+  --av--s-8: 32px;
+  --av--s-10: 40px;
+  --av--s-12: 48px;
+  --av--s-16: 64px;
+  --av--s-section: 88px;
+
+  /* Radii */
+  --av--r-sm: 8px;
+  --av--r-md: 12px;
+  --av--r-lg: 16px;
+  --av--r-xl: 24px;
+  --av--r-pill: 999px;
+
+  /* Shadows */
+  --av--shadow-sm: 0 2px 8px rgba(20, 32, 46, 0.06);
+  --av--shadow-md: 0 10px 30px rgba(20, 32, 46, 0.10);
+  --av--shadow-lg: 0 24px 60px rgba(20, 32, 46, 0.14);
+
+  /* Layout */
+  --av--container: 1200px;
+  --av--header-h: 76px;
+
+  /* Motion */
+  --av--dur-fast: 0.15s;
+  --av--dur: 0.25s;
+  --av--dur-slow: 0.4s;
+  --av--ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Focus ring */
+  --av--focus-ring: 0 0 0 3px rgba(251, 107, 3, 0.35);
+}
+
+/* Breakpoint reference (used in components.css media queries):
+   320 / 375 / 390 / 430 / 640 / 768 / 900 / 960 / 1024 / 1280 / 1440 / 1920 */

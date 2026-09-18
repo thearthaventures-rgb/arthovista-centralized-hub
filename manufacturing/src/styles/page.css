@@ -1,0 +1,118 @@
+/* ============================================================
+   MANUFACTURING PAGE-SPECIFIC (<-- shared pages reuse tokens+components)
+   ============================================================ */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--av--s-6);
+}
+@media (max-width: 980px) { .service-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .service-grid { grid-template-columns: 1fr; } }
+
+.services-cta {
+  margin-top: var(--av--s-10);
+  text-align: center;
+  background: var(--av--surface-alt);
+  border: 1px solid var(--av--line);
+  border-radius: var(--av--r-lg);
+  padding: var(--av--s-8);
+}
+.services-cta p { font-size: var(--av--fs-md); color: var(--av--ink-soft); margin-bottom: var(--av--s-4); font-weight: 600; }
+
+/* Supporting capabilities strip (below the 5 core service cards) */
+.service-support {
+  margin-top: var(--av--s-8);
+  background: var(--av--surface-alt);
+  border: 1px dashed var(--av--line);
+  border-radius: var(--av--r-lg);
+  padding: var(--av--s-6) var(--av--s-8);
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) 1.3fr;
+  gap: var(--av--s-6);
+  align-items: start;
+}
+.service-support__label { font-size: var(--av--fs-md); color: var(--av--ink); margin-bottom: var(--av--s-1); }
+.service-support__note { font-size: var(--av--fs-sm); color: var(--av--muted); }
+.service-support__items { display: grid; gap: var(--av--s-2); }
+.service-support__item { display: flex; align-items: flex-start; gap: var(--av--s-2); font-size: var(--av--fs-sm); color: var(--av--ink-soft); }
+.service-support__item svg { flex-shrink: 0; margin-top: 4px; color: var(--av--orange-500); }
+@media (max-width: 760px) { .service-support { grid-template-columns: 1fr; } }
+
+/* Documentation disclaimer note */
+.doc-note {
+  margin-top: var(--av--s-6);
+  background: var(--av--state-info-bg);
+  border: 1px solid var(--av--blue-100);
+  border-radius: var(--av--r-lg);
+  padding: var(--av--s-4) var(--av--s-5);
+}
+.doc-note p { font-size: var(--av--fs-sm); color: var(--av--blue-700); }
+
+@media (max-width: 420px) {
+  .hero__capabilities .hero__cap { font-size: 11px; padding: var(--av--s-1) var(--av--s-3); }
+}
+
+.section--banner,
+.section--band {
+  padding-top: 0;
+  padding-bottom: var(--av--s-12);
+}
+
+.section--banner {
+  padding-top: var(--av--s-section);
+}
+
+/* hero sits at top without section padding */
+.hero { padding-top: 0; }
+
+/* Scroll-margin for anchored sections */
+[id] { scroll-margin-top: calc(var(--av--header-h) + var(--av--s-4)); }
+
+/* Hero stat numbers — keep ₹ figures readable */
+.stat-card__num { font-size: clamp(20px, 2.4vw, 30px); letter-spacing: -0.03em; }
+
+/* Contact section: form + direct contact panel */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+  gap: var(--av--s-6);
+  align-items: start;
+}
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-panel {
+  background: var(--av--secondary-cta-bg);
+  border-radius: var(--av--r-xl);
+  padding: var(--av--s-8);
+  color: #fff;
+  box-shadow: var(--av--shadow-lg);
+  display: grid;
+  gap: var(--av--s-2);
+}
+.contact-panel__title { font-size: var(--av--fs-h4); margin-bottom: var(--av--s-4); }
+.contact-panel__row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--av--s-3);
+  padding: var(--av--s-3) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  color: inherit;
+  text-decoration: none;
+  transition: opacity var(--av--dur);
+}
+.contact-panel__row:last-of-type { border-bottom: none; }
+.contact-panel__row:hover { opacity: 0.85; }
+.contact-panel__icon {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  border-radius: var(--av--r-sm);
+  background: rgba(255, 255, 255, 0.14);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.contact-panel__meta { display: grid; gap: 2px; }
+.contact-panel__label { font-size: var(--av--fs-xs); opacity: 0.75; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.contact-panel__value { font-weight: 700; font-size: var(--av--fs-md); word-break: break-word; }
+.contact-panel__offices { margin-top: var(--av--s-4); }
+.contact-panel__offices-title { font-size: var(--av--fs-xs); opacity: 0.75; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--av--s-2); }
+.contact-panel__office { font-size: var(--av--fs-sm); line-height: 1.5; opacity: 0.92; margin-bottom: var(--av--s-1); }
