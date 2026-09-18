@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "ArthoVista centralized service hub — static hub + Company Registration, Manufacturing and Startup India sub-sites, with serverless enquiry endpoints under /api. This is a pre-built static site: there is no build step. \"npm run dev\" starts a local static preview (forms will not submit locally — the enquiry endpoints only run once deployed to Vercel, or under \"vercel dev\"). To deploy for real, use the Vercel CLI (\"vercel\") or connect this folder as a Vercel project.",
+  "description": "ArthoVista centralized service hub \u2014 static hub + Company Registration, Manufacturing and Startup India sub-sites, with serverless Supabase lead-capture endpoints under /api. All Supabase writes are server-side using SUPABASE_URL and SUPABASE_SECRET_KEY.",
   "scripts": {
     "dev": "serve . -p 3000",
     "start": "serve . -p 3000"

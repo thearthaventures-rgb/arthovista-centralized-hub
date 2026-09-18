@@ -8,9 +8,8 @@
  *
  * Environment variables (set in the hosting platform, never committed):
  *   SUPABASE_URL                — Supabase project URL (https://xxx.supabase.co)
- *   SUPABASE_SERVICE_ROLE_KEY   — service_role key (SERVER-SIDE ONLY, never in
- *                                 the frontend/browser or public assets)
- *   SUPABASE_TABLE              — optional table name (default leads_mfg_companies)
+ *   SUPABASE_SECRET_KEY          — Supabase secret key (SERVER-SIDE ONLY, never
+ *                                 in the frontend/browser or public assets)
  *   RESEND_API_KEY              — optional; enables the notification email
  *   COMMERCIAL_ENQUIRY_EMAIL    — destination mailbox for the notification
  *   COMMERCIAL_EMAIL_FROM       — optional verified sender address
@@ -18,8 +17,8 @@
  *   COMMERCIAL_RATE_LIMIT_MAX   — optional max requests per IP per window (default 5)
  *   COMMERCIAL_RATE_WINDOW_MS   — optional rate window length (default 10 min)
  *
- * Design rule: the client never talks to Supabase directly — the service_role
- * key lives only in this serverless function. The endpoint returns a truthful
+ * Design rule: the client never talks to Supabase directly — the secret key
+ * lives only in this serverless function. The endpoint returns a truthful
  * 503 until either Supabase or an email provider is configured; the frontend
  * shows the direct phone/WhatsApp fallback — never a fake success.
  */
@@ -33,8 +32,8 @@ const BUCKET_MAX = parsePositiveInt(process.env.COMMERCIAL_RATE_LIMIT_MAX, 5);
 const BUCKET_WINDOW_MS = parsePositiveInt(process.env.COMMERCIAL_RATE_WINDOW_MS, 10 * 60 * 1000);
 
 const SUPABASE_URL = process.env.SUPABASE_URL || '';
-const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
-const SUPABASE_TABLE = process.env.SUPABASE_TABLE || 'leads_mfg_companies';
+const SUPABASE_SECRET_KEY = process.env.SUPABASE_SECRET_KEY || '';
+const SUPABASE_TABLE = 'leads_mfg_companies';
 
 function parsePositiveInt(value, fallback) {
   const n = Number.parseInt(value, 10);
@@ -44,8 +43,8 @@ function parsePositiveInt(value, fallback) {
 /* Lazy client — only created when both env vars exist. */
 let supabase = null;
 function getSupabase() {
-  if (!supabase && SUPABASE_URL && SUPABASE_SERVICE_KEY) {
-    supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+  if (!supabase && SUPABASE_URL && SUPABASE_SECRET_KEY) {
+    supabase = createClient(SUPABASE_URL, SUPABASE_SECRET_KEY);
   }
   return supabase;
 }

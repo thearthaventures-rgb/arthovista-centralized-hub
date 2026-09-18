@@ -156,18 +156,10 @@
     }
 
     function submitViaApi(formId, payload, submitBtn, setStatus) {
-      var sup = CFG.SUPABASE || {};
-      var supabaseReady = !!(sup.URL && sup.TABLE && sup.ANON_KEY &&
-                             sup.ANON_KEY.indexOf('PASTE_YOUR') === -1);
-
       var cfg = CFG.FORM || {};
-      var endpoint = cfg.ENDPOINT;
-      if (supabaseReady) {
-        endpoint = sup.URL.replace(/\/+$/, '') + '/rest/v1/' + sup.TABLE;
-      }
+      var endpoint = cfg.ENDPOINT || '/api/startup-india/enquiry';
 
       if (!cfg.ENABLED || !endpoint) {
-        /* Backend not wired — NEVER fake success. Tell the user clearly. */
         setStatus('pinned',
           'This enquiry form is not yet connected to a live inbox, so we cannot receive your message just yet. ' +
           'Please call or WhatsApp us at +91 98999 02568 instead — we are happy to help right away.', false);
@@ -183,43 +175,27 @@
 
       track('form_send_start', { formId: formId });
 
-      var headers = { 'Content-Type': 'application/json', 'Accept': 'application/json' };
-      var body = JSON.stringify(payload);
-
-      if (supabaseReady) {
-        /* Map camelCase form fields to snake_case columns and drop honeypot. */
-        var row = {
-          name: payload.name,
-          email: payload.email,
-          phone: payload.phone,
-          company: payload.company,
-          entity_type: payload.entityType,
-          business_stage: payload.businessStage,
-          requirement: payload.requirement,
-          message: payload.message,
-          source: 'startup-india-landing'
-        };
-        Object.keys(row).forEach(function (k) {
-          if (row[k] === undefined || row[k] === '') delete row[k];
-        });
-        headers['apikey'] = sup.ANON_KEY;
-        headers['Authorization'] = 'Bearer ' + sup.ANON_KEY;
-        headers['Prefer'] = 'return=minimal';
-        body = JSON.stringify(row);
-      }
-
       fetch(endpoint, {
         method: cfg.METHOD || 'POST',
-        headers: headers,
-        body: body
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
       })
         .then(function (res) {
-          if (!res.ok) throw new Error('HTTP ' + res.status);
-          return res.json().catch(function () { return {}; });
+          return res.json().catch(function () { return {}; }).then(function (body) {
+            if (!res.ok) {
+              var err = new Error(body && body.message ? body.message : ('HTTP ' + res.status));
+              err.status = res.status;
+              throw err;
+            }
+            return body;
+          });
         })
-        .then(function () {
+        .then(function (body) {
           setStatus('success', 'Thank you! Your enquiry has been received and we will get back to you shortly.', false);
-          track('form_success', { formId: formId });
+          track('form_success', { formId: formId, id: body && body.id });
           var form = document.getElementById(formId);
           if (form) form.reset();
         })

@@ -7,7 +7,7 @@
  *
  * Configuration (Vercel project environment variables):
  *   SUPABASE_URL             e.g. https://<project>.supabase.co
- *   SUPABASE_SERVICE_KEY     server-side secret (never the anon/public key)
+ *   SUPABASE_SECRET_KEY      server-side secret (never the anon/public key)
  *
  * Fallback (when Supabase is not configured):
  *   ENQUIRY_ENDPOINT         URL that accepts the lead JSON (e.g. a webhook)
@@ -51,6 +51,7 @@ export async function POST(req) {
     structure: text(body.structure),
     businessStage: text(body.businessStage),
     message: text(body.message),
+    businessName: text(body.businessName),
     consent: body.consent === true,
   };
 
@@ -65,7 +66,7 @@ export async function POST(req) {
   }
 
   // Supabase (preferred) — direct PostgREST insert with the service key.
-  if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_KEY) {
+  if (process.env.SUPABASE_URL && process.env.SUPABASE_SECRET_KEY) {
     const endpoint = `${String(process.env.SUPABASE_URL).replace(/\/+$/, "")}/rest/v1/leads`;
     try {
       const controller = new AbortController();
@@ -76,8 +77,8 @@ export async function POST(req) {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            apikey: process.env.SUPABASE_SERVICE_KEY,
-            Authorization: `Bearer ${process.env.SUPABASE_SERVICE_KEY}`,
+            apikey: process.env.SUPABASE_SECRET_KEY,
+            Authorization: `Bearer ${process.env.SUPABASE_SECRET_KEY}`,
             Prefer: "return=representation",
           },
           body: JSON.stringify({
