@@ -480,9 +480,9 @@ export const footer = {
       links: [
         { href: '#why', label: 'Why ArthoVista' },
         { href: '#lifecycle', label: 'Our approach' },
+        { href: '/company-registration/', label: 'Company Registration' },
+        { href: '/startup-india/', label: 'Startup India & DPIIT Recognition' },
         { href: '#faq', label: 'FAQ' },
-    { href: '/company-registration/', label: 'Company Registration' },
-    { href: '/startup-india/', label: 'Startup India' },
         { href: '#contact', label: 'Contact' }
       ]
     },

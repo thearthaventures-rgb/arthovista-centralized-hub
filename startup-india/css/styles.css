@@ -628,8 +628,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   [data-reveal] { opacity: 1; transform: none; transition: none; }
   .benefit:hover, .e-card:hover, .beyond-card:hover { transform: none; }
 }
-
-/* SEO navigation and related-service links */
+/* SEO service navigation */
 .seo-breadcrumbs{max-width:1200px;margin:0 auto;padding:14px 24px 0;font-size:.82rem;color:#667085;display:flex;gap:8px;align-items:center}
 .seo-breadcrumbs a{color:inherit;text-decoration:none}.seo-breadcrumbs a:hover{text-decoration:underline}
-.related-services{padding:64px 0}.related-services__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}.related-services__grid a{display:flex;flex-direction:column;gap:8px;padding:22px;border:1px solid rgba(0,0,0,.08);border-radius:18px;text-decoration:none;color:inherit;background:rgba(255,255,255,.7)}.related-services__grid a span{opacity:.75;line-height:1.5}@media(max-width:800px){.related-services__grid{grid-template-columns:1fr}}
+.related-services{padding:64px 0}.related-services__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+.related-services__grid a{display:flex;flex-direction:column;gap:8px;padding:22px;border:1px solid rgba(0,0,0,.08);border-radius:18px;text-decoration:none;color:inherit;background:rgba(255,255,255,.7)}
+.related-services__grid a span{opacity:.75;line-height:1.5}@media(max-width:800px){.related-services__grid{grid-template-columns:1fr}}
