@@ -26,6 +26,12 @@ import {
 export function mountManufacturingPage(root) {
   root.innerHTML = '';
 
+  root.appendChild(h('nav', { class: 'seo-breadcrumbs', 'aria-label': 'Breadcrumb' }, [
+    h('a', { href: '/' }, 'ArthoVista Services'),
+    h('span', { 'aria-hidden': 'true' }, '/'),
+    h('span', { 'aria-current': 'page' }, 'Manufacturing Business Advisory')
+  ]));
+
   // CTA tracking (event delegation) — hero + banner + service-link anchors.
   root.addEventListener('click', (e) => {
     const a = e.target.closest('[data-cta-anchor]');
@@ -178,6 +184,20 @@ export function mountManufacturingPage(root) {
       LeadForm({ fields: contact.fields, submitLabel: contact.submitLabel, note: contact.note }),
       ContactInfo({ info: contact.info })
     ])
+  }));
+
+  // Related service links strengthen the service-hub architecture.
+  root.appendChild(Section({
+    id: 'related-services',
+    tone: 'alt',
+    kicker: 'Explore ArthoVista',
+    title: 'Other Business Services',
+    lead: 'Continue with the service that matches your business stage and requirement.',
+    children: hGrid([
+      h('a', { class: 'seo-service-link', href: '/company-registration/' }, [h('strong', {}, 'Company Registration in India'), h('span', {}, 'Private Limited, LLP and OPC registration guidance.')]),
+      h('a', { class: 'seo-service-link', href: '/startup-india/' }, [h('strong', {}, 'Startup India & DPIIT Recognition'), h('span', {}, 'Eligibility, documentation and application guidance for eligible startups.')]),
+      h('a', { class: 'seo-service-link', href: '/' }, [h('strong', {}, 'All ArthoVista Services'), h('span', {}, 'Explore the complete service hub.')])
+    ]
   }));
 
   // 14. Footer

@@ -44,7 +44,7 @@ export const nav = {
 export const hero = {
   badge: 'Manufacturing Business Advisory & Execution',
   title: {
-    pre: 'Build. Fund. Comply. Scale.',
+    pre: 'Manufacturing Business Advisory in India.',
     hl: 'We take care of the business side of manufacturing.',
     post: ''
   },
@@ -481,6 +481,8 @@ export const footer = {
         { href: '#why', label: 'Why ArthoVista' },
         { href: '#lifecycle', label: 'Our approach' },
         { href: '#faq', label: 'FAQ' },
+    { href: '/company-registration/', label: 'Company Registration' },
+    { href: '/startup-india/', label: 'Startup India' },
         { href: '#contact', label: 'Contact' }
       ]
     },
